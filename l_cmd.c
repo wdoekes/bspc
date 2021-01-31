@@ -131,7 +131,7 @@ Error
 For abnormal program terminations in windowed apps
 =================
 */
-void Error (char *error, ...)
+void Error (char *error, ...) __attribute__ ((noreturn))
 {
 	va_list argptr;
 	char text[1024];

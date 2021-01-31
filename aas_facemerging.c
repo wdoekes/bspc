@@ -217,7 +217,8 @@ int AAS_CanMergePlaneFaces(tmp_area_t *tmparea, int planenum)
 {
 	tmp_area_t *frontarea, *backarea;
 	tmp_face_t *face1;
-	int side1, merge, faceflags;
+	int side1, merge;
+	int faceflags = 0;
 
 	frontarea = backarea = NULL;
 	merge = false;

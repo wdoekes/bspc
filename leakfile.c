@@ -68,8 +68,9 @@ void LeakFile (tree_t *tree)
 	while (node->occupied > 1)
 	{
 		int			next;
-		portal_t	*p, *nextportal;
-		node_t		*nextnode;
+		portal_t	*p;
+		portal_t	*nextportal = NULL;
+		node_t		*nextnode = NULL;
 		int			s;
 
 		// find the best portal exit
