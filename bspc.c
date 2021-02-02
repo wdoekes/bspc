@@ -200,12 +200,12 @@ void CreateAASFilesForAllBSPFiles(char *quakepath)
 			//
 			for (qf = bspfiles; qf; qf = qf->next)
 			{
-				sprintf(aasfile, "%s/%s", qf->pakfile, qf->origname);
+				snprintf(aasfile, sizeof(aasfile), "%s/%s", qf->pakfile, qf->origname);
 				Log_Print("found %s\n", aasfile);
 				strcpy(&aasfile[strlen(aasfile)-strlen(".bsp")], ".aas");
 				for (qf2 = aasfiles; qf2; qf2 = qf2->next)
 				{
-					sprintf(buf, "%s/%s", qf2->pakfile, qf2->origname);
+					snprintf(buf, sizeof(buf), "%s/%s", qf2->pakfile, qf2->origname);
 					if (!stricmp(aasfile, buf))
 					{
 						Log_Print("found %s\n", buf);

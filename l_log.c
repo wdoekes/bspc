@@ -61,7 +61,8 @@ void Log_Open(char *filename)
 		printf("can't open the log file %s\n", filename);
 		return;
 	} //end if
-	strncpy(logfile.filename, filename, MAX_LOGFILENAMESIZE);
+	logfile.filename[MAX_LOGFILENAMESIZE - 1] = '\0';
+	strncpy(logfile.filename, filename, MAX_LOGFILENAMESIZE - 1);
 	printf("Opened log %s\n", logfile.filename);
 } //end of the function Log_Create
 //===========================================================================

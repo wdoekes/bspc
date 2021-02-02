@@ -1124,7 +1124,7 @@ void Q2_UnparseEntities (void)
 			strcpy (value, ep->value);
 			StripTrailing (value);
 				
-			sprintf (line, "\"%s\" \"%s\"\n", key, value);
+			snprintf (line, sizeof(line), "\"%s\" \"%s\"\n", key, value);
 			strcat (end, line);
 			end += strlen(line);
 		}
